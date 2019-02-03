@@ -3,27 +3,26 @@ package problem.solving.projecteuler;
 public class EvenFibonacciNumbers {
 
 	public static void main(String[] args) {
-		int range = 4000000;
+		final int MAX_RANGE = 4000000;
 		int result = 0;
 		int number = 1;
 		int sumOfEvenValues = 0;
-		while (result < range) {
-			result = fibonacci(number);
+		while ((result = fibonacci(number)) < MAX_RANGE) {
 			if (isEven(result)) {
 				sumOfEvenValues = sumOfEvenValues + result;
 			}
 			number++;
 		}
-		System.out.println("Sum of even values terrms, whose value do not exceed "+range+" is "+sumOfEvenValues);
+		System.out.println("Sum of even values terrms, whose value do not exceed "+MAX_RANGE+" is "+sumOfEvenValues);
 	}
 
-	public static int fibonacci(int number) {
+	static int fibonacci(int number) {
 		if (number == 1 || number == 2)
 			return 1;
 		return fibonacci(number - 1) + fibonacci(number - 2);
 	}
 
-	public static boolean isEven(int value) {
+	static boolean isEven(int value) {
 		return value % 2 == 0;
 	}
 }
