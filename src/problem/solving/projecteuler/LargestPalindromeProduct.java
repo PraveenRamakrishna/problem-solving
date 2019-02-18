@@ -2,7 +2,9 @@ package problem.solving.projecteuler;
 
 public class LargestPalindromeProduct {
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		System.out.println(largestPalindrome(999));
+		System.out.println(System.nanoTime() - startTime);
 	}
 
 	private static long largestPalindrome(int number) {
