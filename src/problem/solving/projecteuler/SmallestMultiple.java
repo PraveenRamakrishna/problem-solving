@@ -6,7 +6,7 @@ public class SmallestMultiple {
 		long smallestNumber = 2521;
 		boolean smallestNumberNotFound = false;
 		while (!smallestNumberNotFound) {
-			for (int i = 1; i <= 20; i++) {
+			for (short i = 20; i > 0; i--) {
 				smallestNumberNotFound = (smallestNumber % i == 0);
 				if (!smallestNumberNotFound) {
 					smallestNumber++;
