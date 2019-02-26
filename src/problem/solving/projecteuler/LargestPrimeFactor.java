@@ -1,5 +1,7 @@
 package problem.solving.projecteuler;
 
+import static problem.solving.projecteuler.Utils.nextPrime;
+
 /**
  * https://stackoverflow.com/questions/1801391/what-is-the-best-algorithm-for-checking-if-a-number-is-prime
  * https://en.wikipedia.org/wiki/Primality_test
@@ -22,21 +24,5 @@ public class LargestPrimeFactor {
 			}
 		}
 
-	}
-
-	static int nextPrime(int number) {
-		while (true) {
-			boolean isPrime = true;
-			number++;
-			int squareNumber = (int) Math.sqrt(number);
-			for (int i = 2; i <= squareNumber; i++) {
-				if (number % i == 0) {
-					isPrime = false;
-					break;
-				}
-			}
-			if (isPrime)
-				return number;
-		}
 	}
 }
